@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FilmFX.jnlp">
+  <information>
+    <title>FilmFX</title>
+    <vendor>mike</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FilmFX.jar" size="37314" download="eager" />
+    <jar href="lib/GMapsFX-11.0.7.jar" size="217609" download="eager" />
+    <jar href="lib/angus-activation-1.0.0.jar" size="20744" download="eager" />
+    <jar href="lib/jakarta.activation-api-2.1.0.jar" size="63473" download="eager" />
+    <jar href="lib/jakarta.xml.bind-api-4.0.0.jar" size="127111" download="eager" />
+    <jar href="lib/javafx-base-17.0.2-linux.jar" size="746031" download="eager" />
+    <jar href="lib/javafx-base-17.0.2.jar" size="302" download="eager" />
+    <jar href="lib/javafx-controls-17.0.2-linux.jar" size="2545480" download="eager" />
+    <jar href="lib/javafx-controls-17.0.2.jar" size="306" download="eager" />
+    <jar href="lib/javafx-fxml-17.0.2-linux.jar" size="129485" download="eager" />
+    <jar href="lib/javafx-fxml-17.0.2.jar" size="302" download="eager" />
+    <jar href="lib/javafx-graphics-17.0.2-linux.jar" size="4896799" download="eager" />
+    <jar href="lib/javafx-graphics-17.0.2.jar" size="306" download="eager" />
+    <jar href="lib/javafx-media-17.0.2-linux.jar" size="1482064" download="eager" />
+    <jar href="lib/javafx-media-17.0.2.jar" size="303" download="eager" />
+    <jar href="lib/javafx-swing-17.0.2-linux.jar" size="88803" download="eager" />
+    <jar href="lib/javafx-swing-17.0.2.jar" size="303" download="eager" />
+    <jar href="lib/javafx-web-17.0.2-linux.jar" size="36322843" download="eager" />
+    <jar href="lib/javafx-web-17.0.2.jar" size="301" download="eager" />
+    <jar href="lib/jaxb-core-4.0.0.jar" size="238940" download="eager" />
+    <jar href="lib/jaxb-impl-4.0.0.jar" size="921283" download="eager" />
+    <jar href="lib/logback-classic-1.2.3.jar" size="290339" download="eager" />
+    <jar href="lib/logback-core-1.2.3.jar" size="471901" download="eager" />
+    <jar href="lib/slf4j-api-1.7.32.jar" size="41513" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="FilmFX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="filmfx.FilmFX"  name="FilmFX" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filmfx.NewScriptController">
+   <children>
+      <TextArea fx:id="script" prefHeight="550.0" prefWidth="600.0" wrapText="true" />
+      <Button fx:id="saveScript" layoutX="520.0" layoutY="561.0" mnemonicParsing="false" onAction="#save" text="Save File" />
+      <Label fx:id="pathLabel" alignment="CENTER" layoutX="103.0" layoutY="557.0" prefHeight="38.0" prefWidth="398.0" text="Path to Script File" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="successLabel" layoutX="14.0" layoutY="568.0" text="Successfully saved!" visible="false" />
+   </children>
+</AnchorPane>
