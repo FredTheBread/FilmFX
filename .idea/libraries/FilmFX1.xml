@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="FilmFX1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/FilmFX.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

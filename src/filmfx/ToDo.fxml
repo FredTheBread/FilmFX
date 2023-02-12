@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="15" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filmfx.ToDoController">
+
+    <padding>
+        <Insets top="15" />
+    </padding>
+
+    <DatePicker fx:id="picker" />
+
+    <Button onAction="#updateNotes" text="Update Notes" />
+
+    <TextArea fx:id="notes" />
+   <Label fx:id="updated" text="To Do List was successfully updated!" />
+   <Button fx:id="back" mnemonicParsing="false" text="Back to Film Manager" />
+
+</VBox>

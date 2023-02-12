@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filmfx.MainFilmViewController">
+   <top>
+      <HBox prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="450.0" text="Film Manager">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="toDoList" mnemonicParsing="false" onAction="#switchToDo" prefHeight="68.0" prefWidth="450.0" text="To Do List">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="801.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="681.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleSave" text="Save to Textfile" />
+            <Label layoutX="12.0" layoutY="139.0" text="Director: ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="DirectorName" layoutX="81.0" layoutY="136.0" promptText="Director Name" />
+            <Label layoutX="12.0" layoutY="187.0" text="Editor: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="EditorName" layoutX="81.0" layoutY="184.0" promptText="Editor Name" />
+            <Label layoutX="12.0" layoutY="235.0" text="Sound: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="SoundName" layoutX="81.0" layoutY="232.0" promptText="Sound Designer Name" />
+            <Label layoutX="12.0" layoutY="379.0" text="Script: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="12.0" layoutY="411.0" mnemonicParsing="false" onAction="#selectScript" text="Upload">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="77.0" layoutY="379.0" text="Loaded at: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="scriptLabel" alignment="TOP_LEFT" layoutX="77.0" layoutY="414.0" prefHeight="232.0" prefWidth="180.0" text="Not added" wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TableView fx:id="film" layoutX="261.0" layoutY="249.0" prefHeight="414.0" prefWidth="534.0">
+              <columns>
+                <TableColumn fx:id="colActor" prefWidth="147.28463745117188" text="Actor" />
+                <TableColumn fx:id="colCharacter" prefWidth="202.0" text="Character" />
+                  <TableColumn fx:id="colAge" prefWidth="37.0" text="Age" />
+                  <TableColumn fx:id="colScenes" prefWidth="58.5" text="Shots" />
+                  <TableColumn fx:id="colGender" prefWidth="88.0" text="Gender" />
+              </columns>
+            </TableView>
+            <Label layoutX="11.0" layoutY="91.0" text="Title: ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="MovieTitle" layoutX="81.0" layoutY="88.0" promptText="Enter Movie Title" />
+            <Label layoutX="332.0" layoutY="68.0" text="Actor: ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="actorName" layoutX="381.0" layoutY="65.0" promptText="Enter Actor's Full Name" />
+            <Label layoutX="332.0" layoutY="114.0" text="Character: ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="characterName" layoutX="414.0" layoutY="111.0" promptText="Enter Character's Name" />
+            <Label layoutX="332.0" layoutY="160.0" text="Age: ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="actorAge" layoutX="372.0" layoutY="157.0" prefHeight="26.0" prefWidth="46.0" promptText="Age" />
+            <Label layoutX="444.0" layoutY="160.0" text="Number of Shots:  ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="scenesNumber" layoutX="581.0" layoutY="157.0" prefHeight="26.0" prefWidth="42.0" promptText=" #" />
+            <Button layoutX="607.0" layoutY="203.0" mnemonicParsing="false" onAction="#ButtonAdd" text="Add" />
+            <Label fx:id="movieName" layoutX="9.0" layoutY="27.0" prefHeight="45.0" prefWidth="638.0" text="Untitled Movie">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="28.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="actorGender" layoutX="396.0" layoutY="203.0" prefWidth="150.0" />
+            <Label layoutX="332.0" layoutY="206.0" text="Gender: ">
+               <font>
+                  <Font name="SF Compact Rounded Regular" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="658.0" layoutY="203.0" mnemonicParsing="false" onAction="#buttonRemove" text="Delete" />
+            <Button layoutX="721.0" layoutY="203.0" mnemonicParsing="false" onAction="#buttonClear" text="Clear" />
+            <DatePicker fx:id="date" layoutX="135.0" layoutY="280.0" prefHeight="26.0" prefWidth="107.0" />
+            <Label layoutX="12.0" layoutY="283.0" text="Date of Filming:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="331.0" text="Location:">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="scriptOpenButton" layoutX="12.0" layoutY="600.0" mnemonicParsing="false" onAction="#openScript" text="Script Editor" />
+            <Button layoutX="11.0" layoutY="637.0" mnemonicParsing="false" onAction="#createScript" prefHeight="26.0" prefWidth="118.0" text="Create new Script" />
+            <Button layoutX="681.0" layoutY="55.0" mnemonicParsing="false" onAction="#clearFile" prefHeight="23.0" prefWidth="101.0" text="Clear Textfile" />
+            <Label alignment="CENTER" layoutX="8.0" layoutY="65.0" prefHeight="17.0" prefWidth="175.0" text="Press enter to update Movie Title">
+               <font>
+                  <Font size="12.5" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
